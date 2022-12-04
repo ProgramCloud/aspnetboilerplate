@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -189,7 +189,7 @@ namespace Abp.Domain.Repositories
             var currentUnitOfWork = ((IUnitOfWorkManagerAccessor) repo).UnitOfWorkManager.Current;
             if (currentUnitOfWork == null)
             {
-                throw new AbpException($"There is no unit of work in the current context, The hard delete function can only be used in a unit of work.");
+                throw new AbpException("There is no unit of work in the current context, The hard delete function can only be used in a unit of work.");
             }
 
             return currentUnitOfWork;

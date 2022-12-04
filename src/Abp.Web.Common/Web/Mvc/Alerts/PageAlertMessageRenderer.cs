@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +18,9 @@ namespace Abp.Web.Mvc.Alerts
                 sb.Append($"<div class=\"alert alert-{alertMessage.Type.ToString().ToLowerInvariant()}\" {(alertMessage.Dismissible ? "alert-dismisable" : "")} role=\"alert\">" +
                               $"<h4 class=\"alert-heading\">{alertMessage.Title}" +
                                   $"{(alertMessage.Dismissible ? "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>" : "")}" +
-                              $"</h4>" +
+"</h4>"+
                                 $"<p>{alertMessage.Text}</p>" +
-                          $"</div>");
+"</div>");
             }
             return sb.ToString();
         }
